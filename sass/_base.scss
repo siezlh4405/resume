@@ -3,6 +3,7 @@ $tablet: 62.25em; // 996px
 $phone: 37.5em; // 600px
 
 $color-gray1: #333;
+$color-gray2: #ccc;
 
 *,
 *::before,
@@ -17,11 +18,11 @@ html {
 }
 
 body {
+    padding: 2rem 4rem;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 1.7;
+    line-height: 1.5;
     color: $color-gray1;
-    padding: 3rem;
     box-sizing: border-box;
 }
