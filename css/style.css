@@ -17,14 +17,38 @@ body {
   color: #333;
   box-sizing: border-box; }
 
-.profile {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.section {
   margin: 0 10rem;
   border-bottom: 0.8rem solid #ccc;
   padding-bottom: 3rem;
   border-radius: 8px; }
+  .section:not(:last-child) {
+    margin-bottom: 3rem; }
+  .section__title-box {
+    padding-left: 5rem;
+    margin-bottom: 2rem; }
+  .section__title {
+    height: 5.5rem;
+    font-size: 4.4rem;
+    color: #6fa3e3; }
+  .section__sub-title {
+    margin-left: 2rem;
+    font-size: 2.4rem;
+    font-style: italic;
+    color: #194985; }
+  .section_green .section__title {
+    color: #1ad423; }
+  .section_green .section__sub-title {
+    color: #108515; }
+  .section_orange .section__title {
+    color: #f1b174; }
+  .section_orange .section__sub-title {
+    color: #c9701c; }
+
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
   .profile__photo {
     width: 30rem;
     border-radius: 50%;
@@ -33,13 +57,133 @@ body {
     display: flex;
     flex-direction: column; }
   .profile__name {
+    margin-top: 4rem;
     font-size: 4.8rem;
     font-weight: 700;
     line-height: 1.2; }
   .profile__title {
+    margin-left: 3rem;
+    margin-bottom: 3rem;
     font-size: 2.4rem;
     font-weight: 400;
-    margin-left: 3rem;
-    margin-bottom: 7rem; }
+    font-style: italic;
+    color: #555; }
   .profile__contact-box {
     margin-left: 3rem; }
+  .profile__contact-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 3.4rem;
+    color: #555; }
+    .profile__contact-item_link-box {
+      margin-top: 2rem; }
+    .profile__contact-item:not(:last-child) {
+      margin-bottom: .5rem; }
+    .profile__contact-item > *:not(:last-child) {
+      margin-right: 1rem; }
+  .profile__contact-text {
+    font-size: 2.4rem;
+    line-height: 3rem; }
+  .profile__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    cursor: pointer; }
+    .profile__link:hover {
+      opacity: .7; }
+
+.about-me {
+  padding: 0 8rem;
+  font-size: 1.8rem; }
+  .about-me__text {
+    text-indent: 1.8rem; }
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8rem; }
+  .skill__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10rem 6rem 10rem; }
+    .skill__item > *:not(:last-child) {
+      margin-bottom: 3rem; }
+  .skill__img {
+    width: 20rem;
+    height: 20rem; }
+  .skill__text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333; }
+  .skill__level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+  .skill__level-item {
+    width: calc(100% / 6);
+    height: 1.4rem;
+    border: 1px solid #555; }
+    .skill__level-item_fill {
+      background-color: #555; }
+
+.experience {
+  padding: 0 8rem; }
+  .experience__item {
+    display: flex; }
+  .experience__time-box {
+    flex: 0 0 20rem;
+    margin-right: 5rem;
+    border-right: 3px solid #ccc; }
+  .experience__info-box {
+    min-height: 20rem; }
+  .experience__year-text {
+    padding-right: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #6fa3e3; }
+    .experience__year-text_dark {
+      color: #194985; }
+  .experience__company {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #6fa3e3; }
+  .experience__job-title {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #194985; }
+  .experience__job-work-box {
+    font-size: 1.8rem; }
+  .experience__job-work {
+    font-size: inherit;
+    text-indent: 1.8rem;
+    color: #194985; }
+    .experience__job-work:not(:last-child) {
+      margin-bottom: 1.4rem; }
+  .experience__work-title {
+    font-weight: 700;
+    font-size: 2rem; }
+  .experience__work-text {
+    font-size: inherit;
+    padding-left: 3rem; }
+
+.icn-2020 {
+  width: 2rem;
+  height: 2rem;
+  fill: #333; }
+
+.icn-3030 {
+  width: 3rem;
+  height: 3rem;
+  fill: #333; }

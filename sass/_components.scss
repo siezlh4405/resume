@@ -1,11 +1,52 @@
-.profile {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.section {
     margin: 0 10rem;
     border-bottom: .8rem solid $color-gray2;
     padding-bottom: 3rem;
     border-radius: 8px;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    &__title-box {
+        padding-left: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        height: 5.5rem;
+        font-size: 4.4rem;
+        color: $color-blue-light;
+    }
+
+    &__sub-title {
+        margin-left: 2rem;
+        font-size: 2.4rem;
+        font-style: italic;
+        color: $color-blue-dark;
+    }
+
+    &_green &__title {
+        color: $color-green-light;
+    }
+
+    &_green &__sub-title {
+        color: $color-green-dark;
+    }
+
+    &_orange &__title {
+        color: $color-orange-light;
+    }
+
+    &_orange &__sub-title {
+        color: $color-orange-dark;
+    }
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     &__photo {
         width: 30rem;
@@ -19,19 +60,190 @@
     }
 
     &__name {
+        margin-top: 4rem;
         font-size: 4.8rem;
         font-weight: 700;
         line-height: 1.2;
     }
 
     &__title {
+        margin-left: 3rem;
+        margin-bottom: 3rem;
         font-size: 2.4rem;
         font-weight: 400;
-        margin-left: 3rem;
-        margin-bottom: 7rem;
+        font-style: italic;
+        color: $color-gray3;
     }
 
     &__contact-box {
         margin-left: 3rem;
+    }
+
+    &__contact-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 3.4rem;
+        color: $color-gray3;
+
+        &_link-box {
+            margin-top: 2rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__contact-text {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.4rem;
+        height: 3.4rem;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.about-me {
+    padding: 0 8rem;
+    font-size: 1.8rem;
+
+    &__text {
+        text-indent: 1.8rem;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10rem 6rem 10rem;
+
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    &__text {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $color-gray1;
+    }
+
+    &__level {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__level-item {
+        width: calc(100% / 6);
+        height: 1.4rem;
+        border: 1px solid $color-gray3;
+
+        &_fill {
+            background-color: $color-gray3;
+        }
+    }
+}
+
+.experience {
+    padding: 0 8rem;
+
+    &__item {
+        display: flex;
+    }
+
+    &__time-box {
+        flex: 0 0 20rem;
+        margin-right: 5rem;
+        border-right: 3px solid $color-gray2;
+    }
+
+    &__info-box {
+        min-height: 20rem;
+    }
+
+    &__year-text {
+        padding-right: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        color: $color-blue-light;
+
+        &_dark {
+            color: $color-blue-dark;
+        }
+    }
+
+    &__company {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $color-blue-light;
+    }
+
+    &__job-title {
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-blue-dark;
+    }
+
+    &__job-work-box {
+        font-size: 1.8rem;
+    }
+
+    &__job-work {
+        font-size: inherit;
+        text-indent: 1.8rem;
+        color: $color-blue-dark;
+
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    &__work-title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+    &__work-text {
+        font-size: inherit;
+        padding-left: 3rem;
     }
 }
