@@ -111,6 +111,12 @@
     &__text {
         text-indent: 1.8rem;
     }
+
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 .skill {
@@ -194,14 +200,14 @@
     &__company {
         font-size: 2.4rem;
         font-weight: 700;
-        color: $color-blue-light;
+        color: $color-blue-light-second;
     }
 
     &__job-title {
         margin-left: 1rem;
         margin-bottom: 2rem;
         font-style: italic;
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 700;
         color: $color-blue-dark;
     }
@@ -220,6 +226,10 @@
         }
     }
 
+    &__work-list {
+        padding-left: 7rem;
+    }
+
     &__work-title {
         font-weight: 700;
         font-size: 2rem;
@@ -227,7 +237,6 @@
     
     &__work-text {
         font-size: inherit;
-        padding-left: 3rem;
     }
 }
 
@@ -279,6 +288,10 @@
         background-color: $color-gray1;
     }
 
+    #project1-radio4:checked ~ &__img-function > &__img-selection-box:nth-child(4) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
     #project1-radio1:checked ~ #project-image1 {
         margin-left: 0;
     }
@@ -289,6 +302,10 @@
 
     #project1-radio3:checked ~ #project-image1 {
         margin-left: calc(-200% - 6rem);
+    }
+
+    #project1-radio4:checked ~ #project-image1 {
+        margin-left: calc(-300% - 9rem);
     }
 
     &__img-selection-box {
@@ -321,10 +338,15 @@
         flex: 1;
     }
 
-
     &__name {
         font-size: 2.8rem;
         font-weight: 700;
+    }
+
+    &__note {
+        font-size: 1.8rem;
+        color: $color-red-light;
+        font-weight: 400; 
         margin-bottom: 2rem;
     }
 

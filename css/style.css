@@ -92,6 +92,8 @@ body {
   font-size: 1.8rem; }
   .about-me__text {
     text-indent: 1.8rem; }
+  .about-me > *:not(:last-child) {
+    margin-bottom: 3rem; }
 
 .skill {
   display: flex;
@@ -146,12 +148,12 @@ body {
   .experience__company {
     font-size: 2.4rem;
     font-weight: 700;
-    color: #6fa3e3; }
+    color: #90a4bd; }
   .experience__job-title {
     margin-left: 1rem;
     margin-bottom: 2rem;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #194985; }
   .experience__job-work-box {
@@ -162,12 +164,13 @@ body {
     color: #194985; }
     .experience__job-work:not(:last-child) {
       margin-bottom: 1.4rem; }
+  .experience__work-list {
+    padding-left: 7rem; }
   .experience__work-title {
     font-weight: 700;
     font-size: 2rem; }
   .experience__work-text {
-    font-size: inherit;
-    padding-left: 3rem; }
+    font-size: inherit; }
 
 .project {
   padding: 0 8rem; }
@@ -202,12 +205,16 @@ body {
     background-color: #333; }
   #project1-radio3:checked ~ .project__img-function > .project__img-selection-box:nth-child(3) > .project__img-selection {
     background-color: #333; }
+  #project1-radio4:checked ~ .project__img-function > .project__img-selection-box:nth-child(4) > .project__img-selection {
+    background-color: #333; }
   .project #project1-radio1:checked ~ #project-image1 {
     margin-left: 0; }
   .project #project1-radio2:checked ~ #project-image1 {
     margin-left: calc(-100% - 3rem); }
   .project #project1-radio3:checked ~ #project-image1 {
     margin-left: calc(-200% - 6rem); }
+  .project #project1-radio4:checked ~ #project-image1 {
+    margin-left: calc(-300% - 9rem); }
   .project__img-selection-box {
     display: flex;
     justify-content: center;
@@ -230,7 +237,11 @@ body {
     flex: 1; }
   .project__name {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 700; }
+  .project__note {
+    font-size: 1.8rem;
+    color: #e75f5f;
+    font-weight: 400;
     margin-bottom: 2rem; }
   .project__description-box {
     font-size: 2.2rem; }
