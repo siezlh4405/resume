@@ -243,6 +243,11 @@
 .project {
     padding: 0 8rem;
 
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+        border-bottom: 1px solid $color-gray2;
+    }
+
     &__item {
         display: flex;
         align-items: center;
@@ -292,21 +297,72 @@
         background-color: $color-gray1;
     }
 
-    #project1-radio1:checked ~ #project-image1 {
+    #project1-radio1:checked ~ #project1-image1 {
         margin-left: 0;
     }
 
-    #project1-radio2:checked ~ #project-image1 {
+    #project1-radio2:checked ~ #project1-image1 {
         margin-left: calc(-100% - 3rem);
     }
 
-    #project1-radio3:checked ~ #project-image1 {
+    #project1-radio3:checked ~ #project1-image1 {
         margin-left: calc(-200% - 6rem);
     }
 
-    #project1-radio4:checked ~ #project-image1 {
+    #project1-radio4:checked ~ #project1-image1 {
         margin-left: calc(-300% - 9rem);
     }
+
+    #project2-radio1:checked ~ &__img-function > &__img-selection-box:nth-child(1) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+    #project2-radio2:checked ~ &__img-function > &__img-selection-box:nth-child(2) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+    #project2-radio3:checked ~ &__img-function > &__img-selection-box:nth-child(3) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+    #project2-radio4:checked ~ &__img-function > &__img-selection-box:nth-child(4) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+    #project2-radio1:checked ~ #project2-image1 {
+        margin-left: 0;
+    }
+
+    #project2-radio2:checked ~ #project2-image1 {
+        margin-left: calc(-100% - 3rem);
+    }
+
+    #project2-radio3:checked ~ #project2-image1 {
+        margin-left: calc(-200% - 6rem);
+    }
+
+    #project2-radio4:checked ~ #project2-image1 {
+        margin-left: calc(-300% - 9rem);
+    }
+
+
+    #project3-radio1:checked ~ &__img-function > &__img-selection-box:nth-child(1) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+    #project3-radio2:checked ~ &__img-function > &__img-selection-box:nth-child(2) > &__img-selection {
+        background-color: $color-gray1;
+    }
+
+
+    #project3-radio1:checked ~ #project3-image1 {
+        margin-left: 0;
+    }
+
+    #project3-radio2:checked ~ #project3-image1 {
+        margin-left: calc(-100% - 3rem);
+    }
+
 
     &__img-selection-box {
         display: flex;
@@ -330,6 +386,8 @@
 
     &__img {
         width: 100%;
+        min-width: 63.8rem;
+        object-fit: contain;
         margin-right: 3rem;
         transition: all .8s;
     }
